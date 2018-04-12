@@ -1,0 +1,16 @@
+runtime: go
+api_version: go1
+env: flex
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+
+#[START env_variables]
+env_variables:
+  GCLOUD_DATASET_ID: minibits-200710
+#[END env_variables]
+
+handlers:
+- url: /.*
+  script: _go_app
